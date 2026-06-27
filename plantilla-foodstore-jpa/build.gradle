@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.tp.jpa'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JPA (Jakarta Persistence API) + Hibernate 6 como proveedor
+    implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+    implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.38'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+    // Base de datos H2 en modo archivo
+    implementation 'com.h2database:h2:2.2.224'
+}
+
+application {
+    mainClass = 'com.tp.jpa.Main'
+}
+
+// Permite leer desde la consola (System.in) al ejecutar con gradle run
+run {
+    standardInput = System.in
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

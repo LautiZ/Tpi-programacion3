@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis pedidos - Food Store</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../../store/css/store.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="../../store/home/home.html">Food Store</a></h1>
+      <nav>
+        <ul>
+          <li><a href="../../store/home/home.html" class="btn-nav-estilo">Inicio</a></li>
+          <li><a id="linkCart" href="../../store/cart/home.html" class="btn-nav-estilo">Carrito</a></li>
+          <li><button id="logoutButton" class="btn-nav-estilo btn-logout-nav">Cerrar Sesión</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="orders-main">
+      <h2 class="subtitle">Mis pedidos</h2>
+
+      <div id="orders-empty" hidden>No tenés pedidos aún.</div>
+
+      <section id="orders-container"></section>
+    </main>
+
+    <div id="order-modal" class="order-modal-overlay" hidden>
+      <div class="order-modal" role="dialog" aria-modal="true" aria-label="Detalle del pedido">
+        <button class="order-modal-close" id="order-modal-close">&times;</button>
+        <div id="order-modal-body"></div>
+      </div>
+    </div>
+
+    <footer>
+      <hr />
+      <p>&copy; 2026 Food Store. Todos los derechos reservados.</p>
+      <p>contacto <a href="#">info@foodstore.com</a></p>
+    </footer>
+  </body>
+  <script type="module" src="./orders.ts"></script>
+</html>

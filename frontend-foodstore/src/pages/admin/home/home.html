@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Food Store</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+  <body class="admin-page">
+
+    <header>
+      <h1><a href="../../store/home/home.html">Food Store</a></h1>
+      <nav>
+        <ul>
+          <li><a href="../../store/home/home.html" class="btn-nav-estilo">Tienda</a></li>
+          <li><button id="logoutButton" class="btn-nav-estilo btn-logout-nav">Cerrar Sesión</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-brand">
+          <h2>Administración</h2>
+          <p>Panel de control</p>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a href="./home.html" class="active">Dashboard</a></li>
+            <li><a href="../categories/categories.html">Categorías</a></li>
+            <li><a href="../products/products.html">Productos</a></li>
+            <li><a href="../orders/orders.html">Pedidos</a></li>
+            <li><a href="../../store/home/home.html">Ver Tienda</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="admin-content">
+        <div class="admin-page-header">
+          <h1>Panel de Administración</h1>
+        </div>
+
+        <main>
+          <section class="stats-grid">
+            <div class="stat-card stat-card-categories">
+              <span class="stat-number" id="stat-categories">-</span>
+              <span class="stat-label">Categorías</span>
+            </div>
+            <div class="stat-card stat-card-products">
+              <span class="stat-number" id="stat-products">-</span>
+              <span class="stat-label">Productos</span>
+            </div>
+            <div class="stat-card stat-card-orders">
+              <span class="stat-number" id="stat-orders">-</span>
+              <span class="stat-label">Pedidos</span>
+            </div>
+            <div class="stat-card stat-card-available">
+              <span class="stat-number" id="stat-available">-</span>
+              <span class="stat-label">Disponibles</span>
+            </div>
+          </section>
+
+          <section class="dashboard-summary">
+            <div class="summary-card">
+              <h3>Pedidos por estado</h3>
+              <ul id="orders-by-status"></ul>
+            </div>
+            <div class="summary-card">
+              <h3>Acciones rápidas</h3>
+              <div class="quick-links">
+                <a href="../categories/categories.html" class="quick-link-btn">Gestionar categorías</a>
+                <a href="../products/products.html" class="quick-link-btn">Gestionar productos</a>
+                <a href="../orders/orders.html" class="quick-link-btn">Ver pedidos</a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+  </body>
+  <script type="module" src="./home.ts"></script>
+</html>

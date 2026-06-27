@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categorías - Food Store Admin</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../home/css/admin.css" />
+  </head>
+  <body class="admin-page">
+
+    <header>
+      <h1><a href="../../store/home/home.html">Food Store</a></h1>
+      <nav>
+        <ul>
+          <li><a href="../../store/home/home.html" class="btn-nav-estilo">Tienda</a></li>
+          <li><button id="logoutButton" class="btn-nav-estilo btn-logout-nav">Cerrar Sesión</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-brand">
+          <h2>Administración</h2>
+          <p>Panel de control</p>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a href="../home/home.html">Dashboard</a></li>
+            <li><a href="./categories.html" class="active">Categorías</a></li>
+            <li><a href="../products/products.html">Productos</a></li>
+            <li><a href="../orders/orders.html">Pedidos</a></li>
+            <li><a href="../../store/home/home.html">Ver Tienda</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="admin-content">
+        <div class="admin-page-header">
+          <h1>Gestión de Categorías</h1>
+        </div>
+
+        <main>
+        <section class="categories-actions">
+          <button id="toggleAddForm" class="btn-primary">Agregar categoría</button>
+        </section>
+
+        <section id="add-form-section" class="add-form-section" style="display: none;">
+          <form id="add-category-form" class="category-form">
+            <div class="form-group">
+              <label for="input-nombre">Nombre</label>
+              <input
+                type="text"
+                id="input-nombre"
+                name="nombre"
+                required
+                placeholder="Nombre de la categoría"
+              />
+            </div>
+            <div class="form-group">
+              <label for="input-descripcion">Descripción</label>
+              <input
+                type="text"
+                id="input-descripcion"
+                name="descripcion"
+                required
+                placeholder="Descripción de la categoría"
+              />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Guardar</button>
+              <button type="button" id="cancelAdd" class="btn-secondary">Cancelar</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="table-section">
+          <table id="categories-table" class="admin-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Productos</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="categories-tbody"></tbody>
+          </table>
+        </section>
+        </main>
+      </div>
+    </div>
+
+  </body>
+  <script type="module" src="./categories.ts"></script>
+</html>

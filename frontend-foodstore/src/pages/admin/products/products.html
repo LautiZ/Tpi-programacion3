@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos - Admin Food Store</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../home/css/admin.css" />
+  </head>
+  <body class="admin-page">
+
+    <header>
+      <h1><a href="../../store/home/home.html">Food Store</a></h1>
+      <nav>
+        <ul>
+          <li><a href="../../store/home/home.html" class="btn-nav-estilo">Tienda</a></li>
+          <li><button id="logoutButton" class="btn-nav-estilo btn-logout-nav">Cerrar Sesión</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-brand">
+          <h2>Administración</h2>
+          <p>Panel de control</p>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a href="../home/home.html">Dashboard</a></li>
+            <li><a href="../categories/categories.html">Categorías</a></li>
+            <li><a href="./products.html" class="active">Productos</a></li>
+            <li><a href="../orders/orders.html">Pedidos</a></li>
+            <li><a href="../../store/home/home.html">Ver Tienda</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="admin-content">
+        <div class="admin-page-header">
+          <h1>Gestión de Productos</h1>
+          <button id="btn-add-product" class="btn-primary">Agregar producto</button>
+        </div>
+
+      <main>
+        <section id="product-form-section" hidden>
+          <form id="product-form">
+            <h3 id="form-title">Agregar producto</h3>
+            <input type="hidden" id="edit-product-id" value="" />
+            <div class="form-group">
+              <label for="prod-nombre">Nombre:</label>
+              <input type="text" id="prod-nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="prod-precio">Precio:</label>
+              <input type="number" id="prod-precio" min="0" step="0.01" required />
+            </div>
+            <div class="form-group">
+              <label for="prod-descripcion">Descripción:</label>
+              <input type="text" id="prod-descripcion" required />
+            </div>
+            <div class="form-group">
+              <label for="prod-stock">Stock:</label>
+              <input type="number" id="prod-stock" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="prod-imagen">URL Imagen:</label>
+              <input type="url" id="prod-imagen" />
+            </div>
+            <div class="form-group">
+              <label for="prod-categoria">Categoría:</label>
+              <select id="prod-categoria" required></select>
+            </div>
+            <div class="form-group form-check">
+              <label for="prod-disponible">Disponible:</label>
+              <input type="checkbox" id="prod-disponible" />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Guardar</button>
+              <button type="button" id="btn-cancel-product" class="btn-secondary">Cancelar</button>
+            </div>
+          </form>
+        </section>
+
+        <div class="table-responsive">
+          <table id="products-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="products-tbody"></tbody>
+          </table>
+        </div>
+        </main>
+      </div>
+    </div>
+
+  </body>
+  <script type="module" src="./products.ts"></script>
+</html>

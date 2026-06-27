@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito - Food Store</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../css/store.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="../home/home.html">Food Store</a></h1>
+      <nav>
+        <ul>
+          <li><a href="../home/home.html" class="btn-nav-estilo">Inicio</a></li>
+          <li>
+            <button id="logoutButton" class="btn-nav-estilo btn-logout-nav">
+              Cerrar Sesión
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="cart-main">
+      <div class="cart-title">
+        <h2>Mi carrito</h2>
+
+        <div id="cart-empty" hidden>
+          <p class="no-results">Tu carrito está vacío.</p>
+          <a href="../home/home.html" class="btn-primary">Ver productos</a>
+        </div>
+      </div>
+
+      <div id="cart-content">
+        <section id="cart-items"></section>
+
+        <aside class="cart-summary">
+          <h3>Resumen del pedido</h3>
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <strong id="cart-subtotal">$0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Envío:</span>
+            <strong>$0.00</strong>
+          </div>
+          <div class="summary-row summary-total">
+            <span>Total:</span>
+            <strong id="cart-total">$0.00</strong>
+          </div>
+          <button id="btn-confirm-order" class="btn-primary">
+            Confirmar pedido
+          </button>
+          <button id="btn-clear-cart" class="btn-danger">Vaciar Carrito</button>
+        </aside>
+      </div>
+
+      <div id="order-success" hidden>
+        <p class="success-msg">Pedido realizado con éxito.</p>
+        <a href="../home/home.html" class="btn-primary">Seguir comprando</a>
+      </div>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; 2026 Food Store. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+  <script type="module" src="./home.ts"></script>
+</html>

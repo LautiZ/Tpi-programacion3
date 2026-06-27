@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión - Food Store</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body>
+    <main>
+      <div class="titulo">
+        <h1>Food Store</h1>
+        <p>Iniciar sesión</p>
+      </div>
+      <form id="loginForm" action="">
+        <div class="formInput">
+          <label for="emailLogin">Email:</label>
+          <input
+            type="email"
+            id="emailLogin"
+            name="email"
+            placeholder="tucorreo@mail.com"
+            required
+          />
+        </div>
+
+        <div class="formInput">
+          <label for="passwordLogin">Contraseña:</label>
+          <input
+            type="password"
+            id="passwordLogin"
+            name="password"
+            placeholder="Contraseña"
+            required
+          />
+        </div>
+
+        <p id="loginError" hidden class="error-msg"></p>
+
+        <button type="submit" id="loginBtn">Ingresar</button>
+      </form>
+
+      <p class="crear-cuenta">
+        No tenés cuenta?
+        <a href="../registro/registro.html"> Regístrate aquí </a>
+      </p>
+    </main>
+  </body>
+  <script type="module" src="./login.ts"></script>
+</html>

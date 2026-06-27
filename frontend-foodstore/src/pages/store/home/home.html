@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../css/store.css" />
+    <title>Productos - Food Store</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="./home.html">Food Store</a></h1>
+      <nav>
+        <ul>
+          <li><a href="./home.html" class="btn-nav-estilo">Inicio</a></li>
+          <li>
+            <a id="ordersButton" hidden class="btn-nav-estilo" href="../../client/orders/orders.html">Mis pedidos</a>
+          </li>
+          <li>
+            <a href="../cart/home.html" class="btn-nav-estilo" id="linkCart">Carrito</a>
+          </li>
+          <li>
+            <a id="adminButton" hidden class="btn-nav-estilo" href="../../admin/home/home.html">Admin</a>
+          </li>
+          <li><span id="nav-user-name" class="nav-user-name"></span></li>
+          <li><button id="logoutButton" class="btn-nav-estilo btn-logout-nav">Cerrar Sesión</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside>
+      <p class="sidebar-title">Categorías</p>
+      <p class="sidebar-subtitle">Filtra por categoría</p>
+      <ul id="lista-categorias">
+        <li><a href="./home.html">Todos los productos</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <div class="search-filter-bar">
+        <form id="searchForm" action="">
+          <input type="text" id="searchInput" name="buscar" placeholder="Buscar productos..." />
+        </form>
+        <div class="filter-controls">
+          <select id="sort-select">
+            <option value="">Ordenar por</option>
+            <option value="precio-asc">Precio: menor a mayor</option>
+            <option value="precio-desc">Precio: mayor a menor</option>
+            <option value="nombre">Nombre A-Z</option>
+          </select>
+          <select id="disponibilidad-select">
+            <option value="">Todos</option>
+            <option value="true">Disponibles</option>
+            <option value="false">Sin stock</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="productos">
+        <h2 class="subtitle">Todos los Productos <span id="product-count" class="product-count"></span></h2>
+        <section id="contenedor-productos"></section>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+      <hr />
+      <p>&copy; 2026 Food Store. Todos los derechos reservados.</p>
+      <p>contacto <a href="#">info@foodstore.com</a></p>
+    </footer>
+  </body>
+
+  <script type="module" src="./home.ts"></script>
+</html>

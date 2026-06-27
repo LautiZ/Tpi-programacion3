@@ -1,0 +1,101 @@
+:root {
+  --color-primario: #ff6347;
+  --color-fondo: #f0f0f0;
+  --color-texto: #333;
+  --color-blanco: #fff;
+  --color-borde: #ddd;
+  --color-focus: #ff4500;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 10px;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--color-blanco);
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-borde);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+h1 > a {
+  color: var(--color-primario);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+header nav > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 32px;
+}
+
+.btn-nav-estilo {
+  color: var(--color-texto);
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-size: 1rem;
+  margin: 0;
+  padding: 5px;
+}
+
+.btn-nav-estilo:hover {
+  border-bottom: 2px solid var(--color-primario);
+  color: var(--color-primario);
+  transition: 0.3s;
+}
+
+nav > ul > li > button {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-logout-nav {
+  color: var(--color-primario);
+  border: 1.5px solid var(--color-primario);
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-weight: 500;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-logout-nav:hover {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border-bottom: 1.5px solid var(--color-primario);
+}
+
+.nav-user-name {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

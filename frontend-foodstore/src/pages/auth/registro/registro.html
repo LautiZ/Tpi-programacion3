@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body>
+    <main>
+      <div class="titulo">
+        <h1>Food store</h1>
+        <p>Crear cuenta</p>
+      </div>
+      <form id="registerForm" action="">
+        <div class="formInput">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="emailRegister"
+            name="email"
+            placeholder="tucorreo@mail.com"
+            required
+          />
+        </div>
+
+        <div class="formInput">
+          <label for="password">Contraseña:</label>
+          <input
+            type="password"
+            id="passwordRegister"
+            name="password"
+            placeholder="Minimo 8 caracteres"
+            required
+          />
+        </div>
+        <button type="submit" id="registerBtn">Crear cuenta</button>
+      </form>
+
+      <p class="crear-cuenta">
+        ¿Ya tenes cuenta? <a href="../login/login.html">Inicia sesión aquí</a>
+      </p>
+    </main>
+  </body>
+  <script type="module" src="./registro.ts"></script>
+</html>
